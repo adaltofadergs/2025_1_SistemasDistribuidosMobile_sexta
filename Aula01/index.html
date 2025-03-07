@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1> Olá Pessoal </h1>
+    <h3 id="texto"></h3>
+    <button onclick="darBoaNoite()">Dar Boa Noite</button>
+
+    <hr>
+
+    <input type="text" id="txtValor" />
+    <button onclick="gerar()">Gerar Números</button>
+    <div id="divNumeros"></div>
+    <hr>
+
+    <script>
+        function gerar(){
+            var minhaDiv = document.getElementById("divNumeros")
+            var valor = document.getElementById("txtValor").value;
+
+            if( isNaN(valor) ){
+                alert("Este campo aceita somente números!");
+            }else if( valor <= 0 ){
+                alert("Este campo não aceita números NEGATIVOS!");
+            }else{
+                var conteudo = "";
+                for( i = 1; i <= valor; i++){
+                    conteudo += i + "<br>";
+                }
+                minhaDiv.innerHTML = conteudo;
+                minhaDiv.style.background = "red";
+                minhaDiv.style.margin = "20px";
+                minhaDiv.style.padding = "10px";
+            }
+
+        }
+
+        function darBoaNoite(){
+            document.getElementById("texto").innerHTML = "Boa Noite <u>galerinha</u>";
+        }
+    </script>
+
+
+</body>
+</html>
