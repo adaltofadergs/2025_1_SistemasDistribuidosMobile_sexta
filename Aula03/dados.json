@@ -1,0 +1,13 @@
+{
+    "modelo" : "Doblò EX" ,
+    "ano" : 2005 ,
+    "motor" : 1.3 ,
+    "cambioAutomatico" : true ,
+    "cor": [ "prata" , "azul" ] ,
+    "local" : { "uf" : "RS" , "cidade" : "Capão da Canoa" },
+    "opcionais" : [
+        { "nome" : "Ar Condicionado" , "marca" : "GelaMais"} ,
+        { "nome" : "Computador de Bordo" , "marca" : "CompMais"}
+    ] ,
+    "placa" : null
+}
