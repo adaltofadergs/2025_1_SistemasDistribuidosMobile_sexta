@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula04 - JSON com API</title>
+</head>
+<body onload="buscarProdutos()">
+
+    <input type="text" id="txtNome" placeholder="Nome: "/> <br>
+    <input type="text" id="txtPreco" placeholder="Preço: "/> <br>
+    <button onclick="inserir()">Adicionar</button>
+    
+    <hr>
+
+    <button onclick="buscarProdutos()">Atualizar</button>
+    <div id="divProdutos"></div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
