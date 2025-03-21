@@ -30,12 +30,6 @@
         }
     }
 
-
-
-
-
-
-
     
     if( isset( $_REQUEST["inserir"] ) ){
         $nome = $_POST["name"];
@@ -57,5 +51,23 @@
                 echo '{ "resposta" : "Erro no servidor!" } ';
             }
 
+        }
+    }
+
+
+    if( isset( $_REQUEST["excluir"] ) ){
+        $id = $_GET["id"];
+        if( $id != "" ){
+            try {
+                $conn = mysqli_connect( $local, $user, $senha, $banco );
+                if( $conn ){
+                    $query = "DELETE FROM produto WHERE id = $id ";
+                    mysqli_query( $conn, $query );
+                    mysqli_close($conn);
+                    echo '{ "resposta" : "Produto excluído com sucesso!" } ';
+                }
+            } catch (\Throwable $th) {
+                echo '{ "resposta" : "Erro no servidor!" } ';
+            }
         }
     }

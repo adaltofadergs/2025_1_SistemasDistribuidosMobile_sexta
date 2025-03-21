@@ -13,6 +13,7 @@ function buscarProdutos(){
                 txt += '        <th>Id</th>';
                 txt += '        <th>Nome</th>';
                 txt += '        <th>Preço</th>';
+                txt += '        <th>Excluir</th>';
                 txt += '    </tr> ';
 
                 objJSON.produtos.forEach( prod => {
@@ -20,6 +21,7 @@ function buscarProdutos(){
                     txt += '    <td>' + prod.id + '</td>';
                     txt += '    <td>' + prod.nome + '</td>';
                     txt += '    <td>' + prod.preco + '</td>';
+                    txt += '    <td><button onclick="deletar(' + prod.id + ')"> X </button></td>';
                     txt += '</tr> ';
                 });
                 txt += '</table>';
@@ -64,6 +66,22 @@ function inserir(){
         req.send("name=" + nome + "&price=" + preco);
 
     }
+}
+
+function deletar( idProd ){
+    var req = new XMLHttpRequest();
+
+    req.onreadystatechange = function(){
+        if( this.readyState == 4 && this.status == 200 ){
+            objJSON = JSON.parse( this.responseText );
+            if( objJSON.resposta ){
+                alert( objJSON.resposta );
+            }
+            buscarProdutos();
+        }
+    };
+    req.open("GET" , "servidor.php?excluir&id=" + idProd, true);
+    req.send();
 }
 
 
