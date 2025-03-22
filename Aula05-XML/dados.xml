@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<carro>
+    <modelo>Doblò EX</modelo>
+    <motor>1.3</motor>
+    <cambioAutomatico>true</cambioAutomatico>
+    <cores>
+        <cor>prata</cor>
+        <cor>azul</cor>
+    </cores>
+    <local>
+        <uf>RS</uf>
+        <cidade>Capão da Canoa</cidade>
+    </local>
+    <opcionais>
+        <opcional>
+            <nome>Ar Condicionado</nome>
+            <marca>GelaMais</marca>
+        </opcional>
+        <opcional>
+            <nome>Computador de Bordo</nome>
+            <marca>CompMais</marca>
+        </opcional>
+    </opcionais>
+    <placa></placa>
+</carro>
